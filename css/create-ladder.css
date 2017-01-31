@@ -1,7 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Patrick+Hand+SC);
 body {
     /*background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAKElEQVQIW2NkQANOiV2bGZHFQAL75pf5wgVhAiBFYEGYAFwlsgqYAgCqtRfGAd9q4QAAAABJRU5ErkJggg==) #bcc;*/
-    background-image: url('../images/clouds.svg');
+    /*background-image: url('../images/clouds.svg');*/
+    background-color: #A2C7E5;
 }
 
 #cloud {
@@ -45,7 +46,6 @@ body {
   border-top: 1rem solid #433E3F;
   display: block;
   opacity: 0;
-
   padding: 15px 10px;
   transform-origin: 50% 0;
   transform: rotateX(-90deg);
@@ -54,7 +54,7 @@ body {
 }
 #ladder .fold.unfolded, #ladder .fold:nth-child(1) {
   opacity: 1;
-  height: 12rem;
+  height: 15rem;
   transform: rotateX(0);
 }
 
@@ -63,7 +63,7 @@ body {
 }
 
 .challenge__description {
-  width: 100%;
+  width: 95%;
   font-size: 3rem;
   border: 0.3rem solid black;
 }
@@ -72,7 +72,8 @@ input[type=range] {
   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
   width: 100%; /* Specific width is required for Firefox. */
   background: transparent; /* Otherwise white in Chrome */
-  height: 1rem;
+  height: 2rem;
+  color: black;
 }
 
 input[type=range]::-webkit-slider-thumb {
