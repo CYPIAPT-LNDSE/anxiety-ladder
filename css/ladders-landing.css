@@ -7,14 +7,28 @@
   box-sizing:border-box;
   width:100%;
   padding: 0.6rem;
+  font-family: 'Kranky', cursive;
+  background-color: white;
 }
 
-.ladder--new {
+.ladder--new .ladder__image {
   opacity: 0.6;
 }
 
 .ladder__title {
-  font-size: 2.5rem;
+  margin-top:1rem;
+  font-size: 4rem;
+}
+
+.ladder__add {
+  font-size: 30rem;
+  margin: 0;
+  width: 90%;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
 }
 
 .ladder__image {
@@ -23,4 +37,5 @@
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
+  max-height: 70%
 }

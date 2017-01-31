@@ -2,11 +2,16 @@
 @import url("ladders-landing.css");
 @import url("normalise.css");
 
+body {
+  background-color: #E1FEFE;
+}
+
 * {
   box-sizing: border-box;
 }
 
 .nav {
+  font-family: 'Kranky', cursive;
   padding: 1.5rem;
   text-align: center;
   margin-bottom: 4rem;
