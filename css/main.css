@@ -3,8 +3,8 @@
 @import url("normalise.css");
 
 body {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAKElEQVQIW2NkQANOiV2bGZHFQAL75pf5wgVhAiBFYEGYAFwlsgqYAgCqtRfGAd9q4QAAAABJRU5ErkJggg==) #bcc;
-
+  /*background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAKElEQVQIW2NkQANOiV2bGZHFQAL75pf5wgVhAiBFYEGYAFwlsgqYAgCqtRfGAd9q4QAAAABJRU5ErkJggg==) #bcc;*/
+  background-image: url('../images/clouds.svg');
 }
 
 * {
