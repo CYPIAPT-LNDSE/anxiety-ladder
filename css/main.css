@@ -1,2 +1,29 @@
 @import url("grid.css");
 @import url("ladders-landing.css");
+@import url("normalise.css");
+
+body {
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.nav {
+  font-family: 'Kranky', cursive;
+  padding: 1.5rem;
+  text-align: center;
+  margin-bottom: 4rem;
+  background-color: #80B2B2;
+}
+
+.nav__title {
+  font-size: 4rem;
+}
+
+.nav__logout {
+  font-size: 2.5rem;
+  float:right;
+  padding: 0.5rem;
+}

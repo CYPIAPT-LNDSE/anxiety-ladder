@@ -1,0 +1,142 @@
+.ladder {
+  height: 35vh;
+  position: relative;
+  text-align: center;
+  border: 1px solid #000;
+  border-radius: 1rem;
+  box-sizing:border-box;
+  width:100%;
+  padding: 0.6rem;
+  font-family: 'Kranky', cursive;
+  background-color: white;
+}
+
+.ladder--new .ladder__image {
+  opacity: 0.6;
+}
+
+.ladder__title {
+  margin-top:1rem;
+  font-size: 4rem;
+}
+
+.ladder__add {
+  font-size: 30rem;
+  margin: 0;
+  width: 90%;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.ladder__image {
+  width: 90%;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 70%
+}
+
+/* MODAL */
+
+.modal {
+  display: block;
+  width: 80vw;
+  height: 60vh;
+  position: fixed;
+  z-index: 100;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
+}
+
+.closed {
+  display: none;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal__content {
+  position: absolute;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding: 3rem;
+  margin-top: 1rem;
+}
+
+.modal__content h1 {
+  font-size: 4rem;
+}
+
+.modal__content input {
+  color: #333;
+  border: 0.2rem solid #ccc;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: .2s background ease;
+  font-size: 3rem;
+  margin: 0.5rem auto;
+  width: 80%;
+  padding: 1rem;
+  transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  height: 4rem;
+  vertical-align: top;
+  margin-top: 1rem;
+}
+
+.modal__content button {
+  border-radius: 0.5rem;
+  color: #fff;
+  transition: 0.2s background ease;
+  text-align: center;
+  font-size: 3rem;
+  height: 4rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: 0.8rem;
+  margin-left: 0.8rem;
+  padding: 0.5rem 1.2rem;
+  font-family:Trebuchet MS;
+  font-weight:bold;
+  background: #80B2B2;
+}
+
+.modal__content__image {
+  opacity: 0.8;
+  margin: 0 auto;
+}
+
+.modal .modal__close-button {
+  position: absolute;
+  z-index: 1;
+  top: 2rem;
+  /* needs to look OK with or without scrollbar */
+  right: 2rem;
+  border: 0;
+  background: black;
+  color: white;
+  padding:  0.5rem 1rem;
+  font-size: 2rem;
+}
