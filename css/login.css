@@ -10,4 +10,7 @@
 .login-input {
   margin: 1.5rem 0;
   display: block;
+  background: transparent;
+  border: none;
+  border-bottom: 0.1rem solid;
 }
