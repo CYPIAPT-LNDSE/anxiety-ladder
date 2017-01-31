@@ -45,13 +45,25 @@ body {
   border-top: 1rem solid #433E3F;
   display: block;
   opacity: 0;
-  height: 8rem;
+  height: 12rem;
   padding: 15px 10px;
   transform-origin: 50% 0;
   transform: rotateX(-90deg);
   transition: transform 1s, opacity 0.1s;
+
 }
 #ladder .fold.unfolded, #ladder .fold:nth-child(1) {
   opacity: 1;
   transform: rotateX(0);
+}
+
+.challenge__contents label {
+
+  font-size: 3rem;
+}
+
+.challenge__contents input {
+  width: 100%;
+  font-size: 3rem;
+
 }
