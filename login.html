@@ -2,10 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <title>Exposure Ladder</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/login.css">
   </head>
   <body>
-
+    <div class="login">
+      <h1 class="welcome-message">Hi! Welcome to your anxiety tracker</h1>
+      <form action="./ladders-landing.html" class="login-form">
+        <label for="name" class="login-label">What's your name?</label>
+        <input id="name" class="login-input" type="text"/>
+        <label for="password" class="login-label">Now your password</label>
+        <input id="password" class="login-input" type="text"/>
+        <button type="submit" class="login-form__button">Let's go</button>
+      </form>
+    </div>
   </body>
 </html>
