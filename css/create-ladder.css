@@ -65,25 +65,25 @@ body {
 }
 
 input[type=range] {
-  -webkit-appearance: none;
+  /*-webkit-appearance: none;*/
   width: 100%;
-  background: transparent;
+  /*background: transparent;*/
   height: 2rem;
   color: black;
 }
-
+/*
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
-}
+}*/
 
 input[type=range]:focus {
-  outline: none;
+  /*outline: none;*/
 }
-
+/*
 input[type=range]::-ms-track {
   width: 100%;
   cursor: pointer;
   background: transparent;
   border-color: transparent;
   color: transparent;
-}
+}*/
