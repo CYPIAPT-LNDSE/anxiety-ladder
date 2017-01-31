@@ -54,6 +54,7 @@
   background: white;
   box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
 }
+
 .closed {
   display: none;
 }
@@ -77,6 +78,12 @@
   overflow: auto;
   padding: 3rem;
   margin-top: 4rem;
+}
+
+.modal__content__image {
+  opacity: 0.8;
+  margin: 0 auto;
+
 }
 
 .modal__content h1 {
