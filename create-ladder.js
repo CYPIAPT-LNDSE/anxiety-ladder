@@ -1,30 +1,20 @@
-
-
-$('#box').click(function(){
-  $(this).addClass('opened');
-
+const showLadder = function(){
+  $('#ladder').addClass('opened');
   var folds = $('.fold', '#ladder'); console.log(folds);
-  setTimeout(function(){
-    unfoldQ(folds,0);
-  }, 1750);
-});
+  unfoldQ(folds,0);
 
-$('#closeLetter').click(function(e){
-  $('#box').removeClass('opened');
-  $('.unfolded').removeClass('unfolded');
-  e.stopPropagation();
-});
-
-function unfoldQ(elem,inx){
-  if(inx != elem.length){
-console.log(elem[inx]);
-    $(elem[inx]).addClass('unfolded');
-console.log('index: ' + inx);
-    inx = parseInt(inx)+1;
-console.log('index: ' + inx);
-
-    setTimeout(function(){
-      unfoldQ(elem,inx);
-    }, 500);
-  }
+  function unfoldQ(elem,inx){
+    if(inx != elem.length){
+      $(elem[inx]).addClass('unfolded');
+      inx = parseInt(inx)+1;
+      setTimeout(function(){
+        unfoldQ(elem,inx);
+      }, 500);
+    }
+  };
 }
+
+
+
+
+window.onload = showLadder;
