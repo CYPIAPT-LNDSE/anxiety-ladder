@@ -23,3 +23,30 @@
   border: none;
   border-bottom: 0.1rem solid;
 }
+
+
+.login-form__button {
+  background: #30c7c7;
+  background-image: -webkit-linear-gradient(top, #30c7c7, #1f8585);
+  background-image: -moz-linear-gradient(top, #30c7c7, #1f8585);
+  background-image: -ms-linear-gradient(top, #30c7c7, #1f8585);
+  background-image: -o-linear-gradient(top, #30c7c7, #1f8585);
+  background-image: linear-gradient(to bottom, #30c7c7, #1f8585);
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
+  border-radius: 3rem;
+  color: #ffffff;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  text-decoration: none;
+}
+
+.login-form__button:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #30c7c7);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #30c7c7);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #30c7c7);
+  background-image: -o-linear-gradient(top, #3cb0fd, #30c7c7);
+  background-image: linear-gradient(to bottom, #3cb0fd, #30c7c7);
+  text-decoration: none;
+}
