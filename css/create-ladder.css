@@ -1,0 +1,98 @@
+@import url(http://fonts.googleapis.com/css?family=Patrick+Hand+SC);
+
+body { background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAKElEQVQIW2NkQANOiV2bGZHFQAL75pf5wgVhAiBFYEGYAFwlsgqYAgCqtRfGAd9q4QAAAABJRU5ErkJggg==) #bcc;
+/*background: url(http://subtlepatterns.com/patterns/blue_stripes.png)*/; }
+
+#box {
+  background-color: #eee;
+  /*front-shadow: 0 0 5px rgba(0,0,0,0.75);*/
+  height: 175px;
+  margin: 200px auto;
+  perspective: 900px;
+  perspective-origin: 50%;
+  position: relative;
+  transform-style: preserve-3d;
+  width: 300px;
+
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#ladder {
+  /*border: 1px solid red;*/
+  bottom: 0;
+  perspective: 900px;
+  perspective-origin: 50%;
+  position: absolute;
+  transform: translateZ(1px) translate(0,200px);
+  width: 100%;
+}
+.opened #ladder { /* cubic-bezier(0.36, 0.06, 0.70, 0.95) */
+  animation: ladderMovements 3s;
+  transform: translateZ(10px) translate(0, 50px);
+}
+/*#content { width: 100%; }*/
+#ladder .fold { /* SubtlePatterns.com rules :) */
+  background: url(`http://subtlepatterns.com/patterns/lined_ladder.png`);
+  display: block;
+  opacity: 0;
+  padding: 15px 10px;
+  transform-origin: 50% 0;
+  transform: rotateX(-90deg);
+  transition: transform 1s, opacity 0.1s;
+}
+#ladder .fold.unfolded, #ladder .fold:nth-child(1) {
+  opacity: 1;
+  transform: rotateX(0);
+}
+#closeLetter {
+  cursor: pointer;
+  font-family: 'Patrick Hand SC', Verdana, sans-serif;
+}
+
+#lid {
+  border-color: #f0f0f0 transparent transparent;
+  border-style: solid;
+  border-width: 110px 150px 87px 150px;
+  height: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: transform 0.8s;
+  transform: rotateX(0) translateZ(7px);
+  transform-origin: 50% 0;
+  width: 0;
+}
+.opened #lid {
+  transform: rotateX(180deg) translateZ(5px);
+}
+#front {
+  border-color: transparent #dde #e7e7e7 #d5e0e0;
+  border-style: solid;
+  border-width: 87px 150px;
+  bottom: 0;
+  height: 0;
+  left: 0;
+  position: absolute;
+
+  transform: translateZ(5px);
+  width: 0;
+}
+
+@keyframes ladderMovements {
+  0% { transform: translateZ(1px) translate(0,200px); }
+  50% { transform: translateZ(10px) translate(0,25px); }
+  100% { transform: translateZ(10px) translate(0,50px); }
+}/*
+@keyframes unfold {
+  0% { transform: rotateX(-180deg); }
+  30% { transform: rotateX(-180deg); }
+  66% { transform: rotateX(0); }
+  100% { transform: rotateX(0); }
+}
+@keyframes showContent {
+  0% {  }
+  100% {  }
+}*/
