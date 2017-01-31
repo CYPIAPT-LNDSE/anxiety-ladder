@@ -30,7 +30,7 @@ body {
   margin: 1rem auto;
   perspective: 900px;
   perspective-origin: 50%;
-  padding-top: 20rem;
+  padding-top: 15rem;
   width: 70%;
   z-index: -100;
 }
@@ -45,7 +45,7 @@ body {
   border-top: 1rem solid #433E3F;
   display: block;
   opacity: 0;
-  height: 12rem;
+
   padding: 15px 10px;
   transform-origin: 50% 0;
   transform: rotateX(-90deg);
@@ -54,16 +54,41 @@ body {
 }
 #ladder .fold.unfolded, #ladder .fold:nth-child(1) {
   opacity: 1;
+  height: 12rem;
   transform: rotateX(0);
 }
 
-.challenge__contents label {
-
+.challenge label {
   font-size: 3rem;
 }
 
-.challenge__contents input {
+.challenge__description {
   width: 100%;
   font-size: 3rem;
+  border: 0.3rem solid black;
+}
 
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+  height: 1rem;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
 }
