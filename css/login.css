@@ -1,0 +1,25 @@
+.login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
+}
+
+.welcome-message {
+  margin-bottom: 4rem;
+}
+
+.login-form {
+  font-size: 1.5em;
+}
+
+.login-input {
+  width: 80%;
+  margin: 1.5rem auto;
+  display: block;
+  background: transparent;
+  border: none;
+  border-bottom: 0.1rem solid;
+}
