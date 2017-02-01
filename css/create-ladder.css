@@ -1,0 +1,71 @@
+body {
+  background-color: #A2C7E5;
+}
+
+#cloud {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  transition: all 1s ease;
+  width: 95%;
+  z-index: 5;
+}
+
+.cloud-title {
+  position: absolute;
+  left: 25%;
+  top: 12%;
+  font-size: 4rem;
+  font-family: 'Kranky', cursive;
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  z-index: 9;
+}
+
+#ladder {
+  margin: 1rem auto;
+  perspective: 900px;
+  perspective-origin: 50%;
+  padding-top: 15rem;
+  width: 70%;
+  z-index: -9;
+}
+
+#ladder .opened {
+  transform: translateZ(10px) translate(0, -30rem);
+}
+
+#ladder .fold {
+  border-left: 1rem solid #433E3F;
+  border-right: 1rem solid #433E3F;
+  border-top: 1rem solid #433E3F;
+  display: block;
+  opacity: 0;
+  padding: 15px 10px;
+  transform-origin: 50% 0;
+  transform: rotateX(-90deg);
+  transition: transform 1s, opacity 0.1s;
+
+}
+#ladder .fold.unfolded, #ladder .fold:nth-child(1) {
+  opacity: 1;
+  height: 15rem;
+  transform: rotateX(0);
+}
+
+.challenge label {
+  font-size: 3rem;
+}
+
+.challenge__description {
+  width: 95%;
+  font-size: 3rem;
+  border: 0.3rem solid black;
+}
+
+input[type=range] {
+  width: 90%;
+  height: 3rem;
+  color: black;
+}
