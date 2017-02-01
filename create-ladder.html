@@ -5,18 +5,23 @@
     <title>Exposure Ladder</title>
     <link rel="stylesheet" href="css/create-ladder.css">
     <link href="https://fonts.googleapis.com/css?family=Kranky" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
   <body>
 
-    <img id='cloud' src='images/cloud.svg'/>
-    <h2 class='cloud-title'>Eating lunch in the Canteen</h2>
+    <img id='cloud' class='cloud' src='images/cloud.svg'/>
+    <img id='cloudS' class='cloud cloud-small' src='images/cloud.svg'/>
+    <img id='cloudM' class='cloud cloud-medium' src='images/cloud.svg'/>
+    <h2 id='cloudTitle' class='cloud-title'>Eat lunch in the canteen</h2>
 
-    <form id="ladder" class="ladder">
-      <section class="fold">
-      </section>
+    <form id="ladder" class="ladder group">
 
-      <section class="challenge fold">
+      <div id='firstStep' class="fold">
+      </div>
+
+
+      <section class="challenge fold box">
         <label for="description-1">
           <textarea class='challenge__description' id="description-1" placeholder="Description"></textarea>
           <span class="challenge_hints">Description</span>
@@ -26,32 +31,15 @@
         </label>
       </section>
 
-      <section class="challenge fold">
-        <label for="description-2">
-          <textarea class='challenge__description' id="description-2" placeholder="Description"></textarea>
-          <span class="challenge_hints">Description</span>
-        </label>
-        <label for="rating-2">Anxiety rating:
-          <input id="rating-2" type="range" min="0" max="100" value="50"/>
-        </label>
-      </section>
-
-      <section class="challenge fold">
-        <label for="description-3">
-          <textarea class='challenge__description' id="description-3" placeholder="Description"></textarea>
-          <span class="challenge_hints">Description</span>
-        </label>
-        <label for="rating-3">Anxiety rating:
-          <input id="rating-3" type="range" min="0" max="100" value="50"/>
-        </label>
-      </section>
-
-      <section class="fold">
-        <button type="submit" class="complete">Complete</button>
-      </section>
-
     </form>
 
-      <script type="text/javascript" src='create-ladder.js'></script>
+    <div class='ladder__btns'>
+      <button id='addStep' type="submit" class="btn add-step">Add challenge to ladder</button>
+      <button  id= 'completeLadder' type="submit" class="btn complete">Complete Ladder</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+
+    <script type="text/javascript" src='create-ladder.js'></script>
   </body>
 </html>
