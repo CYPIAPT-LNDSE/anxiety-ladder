@@ -1,14 +1,30 @@
+html {
+  background: url(../images/landing-background.png) no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+img.lets-go {
+  display: block;
+  margin: 0 auto;
+  margin-top: 50vh;
+  width: 75%;
+}
+
+.show {
+  display: block;
+}
+
 .login {
+  display: none;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
   text-align: center;
-}
-
-.welcome-message {
-  margin-bottom: 4rem;
 }
 
 .login-form {
@@ -23,7 +39,6 @@
   border: none;
   border-bottom: 0.1rem solid;
 }
-
 
 .login-form__button {
   background: #30c7c7;
