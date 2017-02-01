@@ -2,13 +2,10 @@
   height: 35vh;
   position: relative;
   text-align: center;
-  border: 1px solid #000;
-  border-radius: 1rem;
-  box-sizing:border-box;
+  box-sizing: none;
   width:100%;
   padding: 0.6rem;
   font-family: 'Kranky', cursive;
-  background-color: white;
 }
 
 .cloud--new .cloud__image {
