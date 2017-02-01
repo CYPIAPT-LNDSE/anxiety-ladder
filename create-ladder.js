@@ -60,10 +60,6 @@ completeLadder.addEventListener('click', ()=> {
   const cloudTitle = document.getElementById('cloudTitle');
   cloudTitle.className += ' animated zoomOut'
   ladder.className += ' animated fadeOut'
-
 })
-
-
-
 
 window.onload = showLadder, addHandlersToElements;

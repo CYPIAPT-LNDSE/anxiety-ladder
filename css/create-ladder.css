@@ -55,7 +55,6 @@ body {
   }
 }
 
-
 .cloud-title {
   position: absolute;
   left: 25%;
@@ -121,7 +120,6 @@ input[type=range] {
   left:0;
   bottom:5%;
   width:100%;
-
   z-index: 10;
   transition: 1s all ease;
 }
@@ -139,10 +137,3 @@ input[type=range] {
   font-family:Trebuchet MS;
   background: #80B2B2;
 }
-
-
-/*#slider {
-  height: 3rem;
-  width: 90%;
-  color: black;
-}*/
