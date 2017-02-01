@@ -1,5 +1,7 @@
 body {
   background-color: #A2C7E5;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 .cloud {
@@ -112,6 +114,25 @@ input[type=range] {
   color: black;
 }
 
+.complete {
+  position:absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 5%;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 0.1rem;
+  color: #fff;
+  transition: 0.2s background ease;
+  text-align: center;
+  font-size: 3rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: 0.8rem;
+  padding: 0.5rem 1.2rem;
+  font-family:Trebuchet MS;
+  background: #80B2B2;
+}
 /*#slider {
   height: 3rem;
   width: 90%;
