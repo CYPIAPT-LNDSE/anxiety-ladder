@@ -5,41 +5,52 @@
     <title>Exposure Ladder</title>
     <link rel="stylesheet" href="css/create-ladder.css">
     <link href="https://fonts.googleapis.com/css?family=Kranky" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  </head>
   <body>
 
     <img id='cloud' src='images/cloud.svg'/>
     <h2 class='cloud-title'>Eating lunch in the Canteen</h2>
 
-      <form id="ladder" class="ladder">
-        <div class="fold">
-        </div>
+    <form id="ladder" class="ladder">
+      <section class="fold">
+      </section>
 
-        <section class="challenge fold">
-          <label>Description:</label>
-          <input class='challenge__description'/>
-          <label>Fear rating:</label>
-          <input type="range"  min="0" max="100" value="50"/>
-        </section>
+      <section class="challenge fold">
+        <label for="description-1">
+          <textarea class='challenge__description' id="description-1" placeholder="Description"></textarea>
+          <span class="challenge_hints">Description</span>
+        </label>
+        <label for="rating-1">Anxiety rating:
+          <input id="rating-1" type="range" min="0" max="100" value="50"/>
+        </label>
+      </section>
 
-        <section class="challenge fold">
-          <label>Description:</label>
-          <input class='challenge__description'/>
-          <label>Fear rating:</label>
-          <input type="range"  min="0" max="100" value="50"/>
-        </section>
+      <section class="challenge fold">
+        <label for="description-2">
+          <textarea class='challenge__description' id="description-2" placeholder="Description"></textarea>
+          <span class="challenge_hints">Description</span>
+        </label>
+        <label for="rating-2">Anxiety rating:
+          <input id="rating-2" type="range" min="0" max="100" value="50"/>
+        </label>
+      </section>
 
-        <section class="challenge fold">
-          <label>Description:</label>
-          <input class='challenge__description'/>
-          <label>Fear rating:</label>
-          <input type="range"  min="0" max="100" value="50"/>
-        </section>
+      <section class="challenge fold">
+        <label for="description-3">
+          <textarea class='challenge__description' id="description-3" placeholder="Description"></textarea>
+          <span class="challenge_hints">Description</span>
+        </label>
+        <label for="rating-3">Anxiety rating:
+          <input id="rating-3" type="range" min="0" max="100" value="50"/>
+        </label>
+      </section>
 
-        <div class="fold">
-          <button type="submit" class="complete">Complete</button>
-        </div>
+      <section class="fold">
+        <button type="submit" class="complete">Complete</button>
+      </section>
 
-      </div>
+    </form>
 
       <script type="text/javascript" src='create-ladder.js'></script>
   </body>
