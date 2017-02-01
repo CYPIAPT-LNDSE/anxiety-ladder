@@ -54,18 +54,58 @@ body {
   transform: rotateX(0);
 }
 
-.challenge label {
-  font-size: 3rem;
-}
-
-.challenge__description {
-  width: 95%;
-  font-size: 3rem;
-  border: 0.3rem solid black;
+.challenge {
+  font-size: 2.5rem;
 }
 
 input[type=range] {
   width: 90%;
   height: 3rem;
   color: black;
+}
+
+label {
+    position: relative;
+    display: block;
+}
+
+.challenge__description {
+  width: 100%;
+  font-size: 2.5rem;
+  border: none;
+  box-sizing: border-box;
+  padding: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+textarea::placeholder {
+  transition: all 0.2s ease-in-out;
+  color: #999;
+  font: 18px Helvetica, Arial, sans-serif;
+
+}
+
+textarea:focus {
+  padding-top: 28px;
+  padding-bottom: 12px;
+}
+
+textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+textarea:focus + span {
+  opacity: 1;
+  top: 10px;
+}
+
+span {
+  color: #35dc9b;
+  font: 13px Helvetica, Arial, sans-serif;
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  font-size: 1.2rem;
 }
