@@ -30,7 +30,6 @@ body {
   animation: cloud-move-m 6s ease infinite;
 }
 
-
 @keyframes cloud-move-m {
   0% {
     transform: none;
@@ -123,6 +122,7 @@ input[type=range] {
   width:100%;
   z-index: 10;
   transition: 1s all ease;
+
 }
 
 .btn {
@@ -177,7 +177,6 @@ textarea::placeholder {
   transition: all 0.2s ease-in-out;
   color: #999;
   font: 18px Helvetica, Arial, sans-serif;
-
 }
 
 textarea:focus {
@@ -195,7 +194,7 @@ textarea:focus + span {
 }
 
 span {
-  color: #35dc9b;
+  color: black;
   font: 13px Helvetica, Arial, sans-serif;
   position: absolute;
   top: 0px;
@@ -203,5 +202,10 @@ span {
   opacity: 0;
   transition: all 0.2s ease-in-out;
   font-size: 1.2rem;
+}
 
+p {
+  color:white;
+  font-weight: bold;
+  font-style: cursive;
 }
