@@ -43,8 +43,32 @@ addStep.addEventListener('click', () => {
   setTimeout(() => {
     ladder.lastChild.className += ' unfolded';
   }, 100);
+})
 
+const completeLadder = document.getElementById('completeLadder');
+
+completeLadder.addEventListener('click', ()=> {
+  //main cloud
+  const cloud = document.getElementById('cloud');
+  cloud.className += ' animated bounceOutUp';
+  //small cloud
+  const cloudS = document.getElementById('cloudS');
+  // cloudS.style.animation = 'none';
+  // cloudS.className += ' animated bounceOutUp';
+  cloudS.style.display ='none'
+  //medium cloud
+  const cloudM = document.getElementById('cloudM');
+  // cloudM.style.animation = 'none';
+  // cloudM.className += ' animated bounceOutUp';
+  cloudM.style.display ='none'
+
+  const cloudTitle = document.getElementById('cloudTitle');
+  cloudTitle.className += ' animated zoomOut'
+  ladder.className += ' animated fadeOut'
 
 })
+
+
+
 
 window.onload = showLadder, addHandlersToElements;

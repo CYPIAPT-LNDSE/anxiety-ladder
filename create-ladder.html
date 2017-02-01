@@ -6,12 +6,13 @@
     <link rel="stylesheet" href="css/create-ladder.css">
     <link href="https://fonts.googleapis.com/css?family=Kranky" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <body>
 
     <img id='cloud' class='cloud' src='images/cloud.svg'/>
-    <img id='cloudS' class='cloud' src='images/cloud.svg'/>
-    <img id='cloudM' class='cloud' src='images/cloud.svg'/>
-    <h2 class='cloud-title'>Eating lunch in the Canteen</h2>
+    <img id='cloudS' class='cloud cloud-small' src='images/cloud.svg'/>
+    <img id='cloudM' class='cloud cloud-medium' src='images/cloud.svg'/>
+    <h2 id='cloudTitle' class='cloud-title'>Eating lunch in the Canteen</h2>
 
     <div id="ladder" class="ladder">
       <div class="fold">
@@ -33,10 +34,11 @@
       </form>
 
     </div>
-    <div class='ladder_btns'>
+    <div class='ladder__btns'>
       <button id='addStep' type="submit" class="btn add-step">Add challenge to ladder</button>
-      <button  type="submit" class="btn complete">Complete Ladder</button>
+      <button  id= 'completeLadder' type="submit" class="btn complete">Complete Ladder</button>
     </div>
+
     <script type="text/javascript" src='create-ladder.js'></script>
   </body>
 </html>
