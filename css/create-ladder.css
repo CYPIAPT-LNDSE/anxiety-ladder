@@ -2,6 +2,7 @@ body {
   background-color: #A2C7E5;
   box-sizing: border-box;
   margin: 0;
+  height: 100vh;
 }
 
 .cloud {
@@ -98,6 +99,7 @@ body {
   transform: rotateX(0);
 }
 
+
 .challenge label {
   font-size: 3rem;
 }
@@ -114,14 +116,18 @@ input[type=range] {
   color: black;
 }
 
-.complete {
-  position:absolute;
-  display: flex;
-  justify-content: center;
-  bottom: 5%;
+.ladder__btns {
+  position:fixed;
+  left:0;
+  bottom:5%;
+  width:100%;
+  background:#999;
+  z-index: 10;
+    transition: 1s all ease;
+}
+
+.btn {
   width: 100%;
-  margin: 0 auto;
-  border-radius: 0.1rem;
   color: #fff;
   transition: 0.2s background ease;
   text-align: center;
@@ -133,6 +139,8 @@ input[type=range] {
   font-family:Trebuchet MS;
   background: #80B2B2;
 }
+
+
 /*#slider {
   height: 3rem;
   width: 90%;

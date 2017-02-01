@@ -13,42 +13,30 @@
     <img id='cloudM' class='cloud' src='images/cloud.svg'/>
     <h2 class='cloud-title'>Eating lunch in the Canteen</h2>
 
-      <div id="ladder" class="ladder">
-        <div class="fold">
-        </div>
-
-        <form class="challenge fold">
-          <label>Description:</label>
-          <input class='challenge__description'/>
-          <label>Fear rating:</label>
-          <input type="range"  min="0" max="100" value="50"/>
-          <button type="submit" class="save">Save</button>
-        </form>
-
-        <form class="challenge fold">
-          <label>Description:</label>
-          <input class='challenge__description'/>
-          <label>Fear rating:</label>
-          <input type="range"  min="0" max="100" value="50"/>
-          <button type="submit" class="save">Save</button>
-        </form>
-
-        <form class="challenge fold">
-          <label>Description:</label>
-          <input class='challenge__description'/>
-          <label>Fear rating:</label>
-          <input type="range"  min="0" max="100" value="50"/>
-          <button type="submit" class="save">Save</button>
-        </form>
-
-        <div class="fold">
-
-        </div>
-
+    <div id="ladder" class="ladder">
+      <div class="fold">
       </div>
-      
-      <button type="submit" class="complete">Complete Ladder</button>
 
-      <script type="text/javascript" src='create-ladder.js'></script>
+      <form class="challenge fold">
+        <label>Description:</label>
+        <input class='challenge__description'/>
+        <label>Fear rating:</label>
+        <input type="range"  min="0" max="100" value="50"/>
+
+      </form>
+
+      <form class="challenge fold">
+        <label>Description:</label>
+        <input class='challenge__description'/>
+        <label>Fear rating:</label>
+        <input type="range"  min="0" max="100" value="50"/>
+      </form>
+
+    </div>
+    <div class='ladder_btns'>
+      <button id='addStep' type="submit" class="btn add-step">Add challenge to ladder</button>
+      <button  type="submit" class="btn complete">Complete Ladder</button>
+    </div>
+    <script type="text/javascript" src='create-ladder.js'></script>
   </body>
 </html>
