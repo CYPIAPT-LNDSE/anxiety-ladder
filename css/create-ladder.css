@@ -30,7 +30,6 @@ body {
   animation: cloud-move-m 6s ease infinite;
 }
 
-
 @keyframes cloud-move-m {
   0% {
     transform: none;

@@ -27,7 +27,7 @@
             <label for="rating-1">Anxiety rating:
               <input class='anxiety-rating' id="rating-1" type="range" min="0" max="100" value="50"/>
             </label>
-        `
+            `
 
     let newStep = document.createElement('SECTION');
     newStep.className = 'challenge fold box';
