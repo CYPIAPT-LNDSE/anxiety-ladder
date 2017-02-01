@@ -25,7 +25,7 @@
               <span class="challenge_hints">Description</span>
             </label>
             <label for="rating-1">Anxiety rating:
-              <input id="rating-1" type="range" min="0" max="100" value="50"/>
+              <input class='anxiety-rating' id="rating-1" type="range" min="0" max="100" value="50"/>
             </label>
         `
 
@@ -51,21 +51,31 @@
     cloudM.style.display ='none'
     const cloudTitle = document.getElementById('cloudTitle');
     cloudTitle.className += ' animated pulse move-up'
-    layout();
+    reOrder();
+    changeButtons();
+    setText('.challenge__description');
+    setText('.anxiety-rating')
+  })
+
+
+  //Swap button title on completion of ladder
+  const changeButtons = () => {
     addStep.textContent = 'Edit ladder';
     completeLadder.textContent = 'Back to my Goals';
+  }
 
-    const desc = document.getElementsByClassName('challenge__description');
-    Array.prototype.forEach.call(desc, (d) => {
-      console.log(d);
+  //Set text of input fields to ladder
+  const setText = (select) => {
+    const desc = document.querySelectorAll(select);
+    desc.forEach( (d) => {
       var contents = document.createElement('P');
       contents.innerText = d.value;
       d.replaceWith(contents);
     })
-  })
+  }
 
   //REORDER steps
-  const layout = () => {
+  const reOrder = () => {
     var nodes = document.querySelectorAll(".box");
     var ease  = Power1.easeInOut;
     var boxes = [];
