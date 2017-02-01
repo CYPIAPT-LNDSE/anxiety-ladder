@@ -2,7 +2,7 @@ body {
   background-color: #A2C7E5;
 }
 
-#cloud {
+.cloud {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -10,6 +10,48 @@ body {
   width: 95%;
   z-index: 5;
 }
+
+#cloudS {
+  width: 25%;
+  z-index: 4;
+  justify-content: flex-end;
+  top: 5%;
+  animation: cloud-move-s 8s ease infinite;
+}
+
+#cloudM {
+  width: 40%;
+  z-index: 4;
+  right: 0%;
+  top: 5%;
+  animation: cloud-move-m 6s ease infinite;
+}
+
+
+@keyframes cloud-move-m {
+  0% {
+    transform: none;
+  }
+  40% {
+    transform: translateX(-45%) ;
+  }
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes cloud-move-s {
+  0% {
+    transform: none;
+  }
+  25% {
+    transform: translateX(45%) ;
+  }
+  100% {
+    transform: none;
+  }
+}
+
 
 .cloud-title {
   position: absolute;
