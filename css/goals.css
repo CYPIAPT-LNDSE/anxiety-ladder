@@ -1,43 +1,38 @@
-.ladder {
+.goal {
   height: 35vh;
   position: relative;
   text-align: center;
-  border: 1px solid #000;
-  border-radius: 1rem;
-  box-sizing:border-box;
+  box-sizing: none;
   width:100%;
   padding: 0.6rem;
   font-family: 'Kranky', cursive;
-  background-color: white;
 }
 
-.ladder--new .ladder__image {
+.goal--new {
   opacity: 0.6;
 }
 
-.ladder__title {
-  margin-top:1rem;
+.goal__title {
+  position: absolute;
+  top: 50%;
   font-size: 4rem;
 }
 
-.ladder__add {
+.goal__add {
   font-size: 30rem;
-  margin: 0;
-  width: 90%;
   position: absolute;
-  top: 60%;
+  margin: 0;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
-
+  opacity: 0.6;
 }
 
-.ladder__image {
-  width: 90%;
+.cloud {
   position: absolute;
-  top: 60%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-height: 70%
 }
 
 /* MODAL */
