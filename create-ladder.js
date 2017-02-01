@@ -28,7 +28,7 @@
               <input id="rating-1" type="range" min="0" max="100" value="50"/>
             </label>
         `
-        
+
     let newStep = document.createElement('SECTION');
     newStep.className = 'challenge fold box';
     newStep.innerHTML = step;
@@ -52,8 +52,17 @@
     const cloudTitle = document.getElementById('cloudTitle');
     cloudTitle.className += ' animated pulse move-up'
     layout();
-  })
+    addStep.textContent = 'Edit ladder';
+    completeLadder.textContent = 'Back to my Goals';
 
+    const desc = document.getElementsByClassName('challenge__description');
+    Array.prototype.forEach.call(desc, (d) => {
+      console.log(d);
+      var contents = document.createElement('P');
+      contents.innerText = d.value;
+      d.replaceWith(contents);
+    })
+  })
 
   //REORDER steps
   const layout = () => {
