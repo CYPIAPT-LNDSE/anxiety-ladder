@@ -2,23 +2,23 @@
   height: 35vh;
   position: relative;
   text-align: center;
-  border: 1px solid #000;
-  border-radius: 1rem;
+
+
   box-sizing:border-box;
   width:100%;
   padding: 0.6rem;
   font-family: 'Kranky', cursive;
-  background-color: white;
+
 }
 
 .ladder--new .ladder__image {
   opacity: 0.6;
 }
-
+/*
 .ladder__title {
   margin-top:1rem;
   font-size: 4rem;
-}
+}*/
 
 .ladder__add {
   font-size: 30rem;

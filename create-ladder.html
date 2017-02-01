@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Exposure Ladder</title>
     <link rel="stylesheet" href="css/create-ladder.css">
+
     <link href="https://fonts.googleapis.com/css?family=Kranky" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <body>
@@ -11,25 +12,20 @@
     <img id='cloud' class='cloud' src='images/cloud.svg'/>
     <img id='cloudS' class='cloud cloud-small' src='images/cloud.svg'/>
     <img id='cloudM' class='cloud cloud-medium' src='images/cloud.svg'/>
-    <h2 id='cloudTitle' class='cloud-title'>Eating lunch in the Canteen</h2>
+    <h2 id='cloudTitle' class='cloud-title'>Eat lunch in the canteen</h2>
 
-    <div id="ladder" class="ladder">
-      <div class="fold">
+    <div id="ladder" class="ladder group">
+
+      <div id='firstStep' class="fold box">
       </div>
 
-      <form class="challenge fold">
-        <label>Description:</label>
-        <input class='challenge__description'/>
-        <label>Fear rating:</label>
-        <input type="range"  min="0" max="100" value="50"/>
-
-      </form>
-
-      <form class="challenge fold">
-        <label>Description:</label>
-        <input class='challenge__description'/>
-        <label>Fear rating:</label>
-        <input type="range"  min="0" max="100" value="50"/>
+      <form class="challenge fold box">
+        <form class="challenge fold box">
+          <label>Description:</label>
+          <input class='challenge__description'/>
+          <label>Fear rating:</label>
+          <input type="range"  min="0" max="100" value="50"/>
+        </form>
       </form>
 
     </div>
@@ -38,6 +34,8 @@
       <button id='addStep' type="submit" class="btn add-step">Add challenge to ladder</button>
       <button  id= 'completeLadder' type="submit" class="btn complete">Complete Ladder</button>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
 
     <script type="text/javascript" src='create-ladder.js'></script>
   </body>
