@@ -53,14 +53,11 @@
 
   //REORDER steps
   const layout = () => {
-    console.log('complete clicked');
-    var group = document.querySelector(".group");
     var nodes = document.querySelectorAll(".box");
-    var total = nodes.length;
     var ease  = Power1.easeInOut;
     var boxes = [];
 
-    for (var i = 0; i < total; i++) {
+    nodes.forEach( (node,i) => {
       var node = nodes[i];
       TweenLite.set(node, { x: 0 });
       boxes[i] = {
@@ -69,21 +66,20 @@
         y: node.offsetTop,
         node
       };
-    }
-    group.classList.toggle("reorder");
-    console.log('group classlist: ', group.classList);
-    console.log(group.classList);
-    for (var i = 0; i < total; i++) {
+    });
+
+    ladder.classList.toggle("reorder");
+    boxes.forEach( (box,i) => {
       var box = boxes[i];
       var lastX = box.x;
       var lastY = box.y;
       box.x = box.node.offsetLeft;
       box.y = box.node.offsetTop;
-      if (lastX === box.x && lastY === box.y) continue;
+      if (lastX !== box.x && lastY !== box.y) return;
       var x = box.transform.x + lastX - box.x;
       var y = box.transform.y + lastY - box.y;
-      TweenLite.fromTo(box.node, 2, { x, y }, { x: 0, y: 0, ease });
-    }
+      TweenLite.fromTo(box.node, 2, { x, y }, { lastX, lastY, ease });
+    });
   }
   showLadder();
 })();
