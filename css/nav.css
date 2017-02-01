@@ -1,0 +1,27 @@
+nav {
+  top: -0.5rem;
+  height: 8rem;
+  width: 100%;
+  position: fixed;
+  font-family : 'Chivo';
+  color: white;
+  background-color: #3B3561;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+nav p {
+  font-size: 3rem;
+}
+
+nav a {
+  padding: 1rem;
+  color: white;
+  font-size: 5rem;
+  text-decoration: none;
+position: absolute;
+  right: 5%;
+}
