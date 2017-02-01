@@ -20,12 +20,16 @@
   const addStep = document.getElementById('addStep');
   addStep.addEventListener('click', () => {
     let step = `
-          <label>Description:</label>
-          <input class='challenge__description'/>
-          <label>Fear rating:</label>
-          <input type="range"  min="0" max="100" value="50"/>
+            <label for="description-1">
+              <textarea class='challenge__description' id="description-1" placeholder="Description"></textarea>
+              <span class="challenge_hints">Description</span>
+            </label>
+            <label for="rating-1">Anxiety rating:
+              <input id="rating-1" type="range" min="0" max="100" value="50"/>
+            </label>
         `
-    let newStep = document.createElement('FORM');
+        
+    let newStep = document.createElement('SECTION');
     newStep.className = 'challenge fold box';
     newStep.innerHTML = step;
     ladder.appendChild(newStep);

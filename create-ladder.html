@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <title>Exposure Ladder</title>
     <link rel="stylesheet" href="css/create-ladder.css">
-
     <link href="https://fonts.googleapis.com/css?family=Kranky" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
   <body>
 
@@ -15,21 +15,23 @@
     <img id='cloudM' class='cloud cloud-medium' src='images/cloud.svg'/>
     <h2 id='cloudTitle' class='cloud-title'>Eat lunch in the canteen</h2>
 
-    <div id="ladder" class="ladder group">
+    <form id="ladder" class="ladder group">
 
       <div id='firstStep' class="fold">
       </div>
 
-      <form class="challenge fold box">
-        <form class="challenge fold box">
-          <label>Description:</label>
-          <input class='challenge__description'/>
-          <label>Fear rating:</label>
-          <input type="range"  min="0" max="100" value="50"/>
-        </form>
-      </form>
 
-    </div>
+      <section class="challenge fold box">
+        <label for="description-1">
+          <textarea class='challenge__description' id="description-1" placeholder="Description"></textarea>
+          <span class="challenge_hints">Description</span>
+        </label>
+        <label for="rating-1">Anxiety rating:
+          <input id="rating-1" type="range" min="0" max="100" value="50"/>
+        </label>
+      </section>
+
+    </form>
 
     <div class='ladder__btns'>
       <button id='addStep' type="submit" class="btn add-step">Add challenge to ladder</button>
