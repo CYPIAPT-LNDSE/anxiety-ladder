@@ -2,33 +2,33 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Exposure Ladder</title>
+    <title>Your Goals</title>
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Kranky" rel="stylesheet">
   </head>
   <body>
     <nav class='nav'>
-        <span class='nav__title'>Exposure Ladder</span>
+        <span class='nav__title'>Your Goals</span>
         <span class='nav__logout'>Logout</span>
     </nav>
     <div class='row'>
       <div class='col-6'>
-        <div class='ladder'>
-          <h2 class='ladder__title'>Going to School</h2>
-          <img src='images/ladder.jpg' class='ladder__image' alt="">
+        <div class='cloud'>
+          <img id='school' src='images/cloud.svg' class='cloud__image' alt=""/>
+          <h1 class='cloud__title'>Going to School</h1>
         </div>
       </div>
       <div class='col-6'>
-        <div class='ladder'>
-          <h2 class='ladder__title'>Shopping at the Mall</h2>
-          <img src='images/ladder.jpg' class='ladder__image' alt="">
+        <div class='cloud'>
+          <img id='shopping' src='images/cloud.svg' class='cloud__image' alt=""/>
+          <h1 class='cloud__title'>Shopping at the Mall</h1>
         </div>
       </div>
       <div class='col-6'>
-        <div class='ladder ladder--new' id="create-ladder">
-          <h2 class='ladder__title'>Create a new Ladder</h2>
-          <h2 class='ladder__add'>+</h2>
-          <img src='images/ladder.jpg' class='ladder__image' alt="">
+        <div class='cloud cloud--new' id="create-cloud">
+          <img id='new' src='images/cloud.svg' class='cloud__image' alt=""/>
+          <h1 class='cloud__title'>Create a new goal</h1>
+          <h2 class='cloud__add'>+</h2>
         </div>
       </div>
       <div class="modal-overlay closed" id="modal-overlay"></div>
@@ -36,9 +36,9 @@
         <button class="modal__close-button" id="close-button">Cancel</button>
         <div class="modal__content">
           <h1>Choose a name for the Goal you're going to overcome!</h1>
-          <input placeholder="Name of your ladder"></input>
+          <input placeholder="Name of your goal"></input>
           <button onclick="location.href = './create-ladder.html'">+</button>
-          <img src='images/ladder.jpg' class='modal__content__image' alt="ladder">
+          <img src='images/cloud.svg' class='modal__content__image' alt="cloud">
         </div>
       </div>
     <div>

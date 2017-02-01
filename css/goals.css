@@ -1,4 +1,4 @@
-.ladder {
+.cloud {
   height: 35vh;
   position: relative;
   text-align: center;
@@ -11,16 +11,16 @@
   background-color: white;
 }
 
-.ladder--new .ladder__image {
+.cloud--new .cloud__image {
   opacity: 0.6;
 }
 
-.ladder__title {
+.cloud__title {
   margin-top:1rem;
   font-size: 4rem;
 }
 
-.ladder__add {
+.cloud__add {
   font-size: 30rem;
   margin: 0;
   width: 90%;
@@ -31,7 +31,7 @@
 
 }
 
-.ladder__image {
+.cloud__image {
   width: 90%;
   position: absolute;
   top: 60%;
