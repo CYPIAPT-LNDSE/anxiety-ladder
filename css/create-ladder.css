@@ -65,25 +65,7 @@ body {
 }
 
 input[type=range] {
-  /*-webkit-appearance: none;*/
-  width: 100%;
-  /*background: transparent;*/
-  height: 2rem;
+  width: 90%;
+  height: 3rem;
   color: black;
 }
-/*
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-}*/
-
-input[type=range]:focus {
-  /*outline: none;*/
-}
-/*
-input[type=range]::-ms-track {
-  width: 100%;
-  cursor: pointer;
-  background: transparent;
-  border-color: transparent;
-  color: transparent;
-}*/
