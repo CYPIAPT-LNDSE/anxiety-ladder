@@ -65,6 +65,11 @@ body {
   text-align: center;
   margin: 0 auto;
   z-index: 9;
+  transition: top 2s ease;
+}
+
+.move-up {
+  top: 2%;
 }
 
 #ladder {
@@ -75,7 +80,8 @@ body {
   width: 70%;
   z-index: -9;
   display: flex;
- flex-direction: column;
+  flex-direction: column;;
+  transition: all 0.9s ease;
 }
 
 #ladder .opened {
@@ -94,13 +100,11 @@ body {
   transition: transform 1s, opacity 0.1s;
 }
 
-
 #ladder .fold.unfolded, #ladder .fold:nth-child(1) {
   opacity: 1;
   height: 15rem;
   transform: rotateX(0);
 }
-
 
 .challenge label {
   font-size: 3rem;
@@ -141,26 +145,26 @@ input[type=range] {
   background: #80B2B2;
 }
 
-.box {
-  flex: 1;
- align-self: stretch;
+/* reordered */
+.group.reorder .box:nth-child(1) {
+  order: 5;
+}
+.group.reorder  .box:nth-child(2) {
+  order: 4;
 }
 
-.group.reorder {
+.group.reorder  .box:nth-child(3) {
+  order: 1;
+}
 
-  .box:nth-child(1) {
-    order: 2;
-  }
+.group.reorder  .box:nth-child(4) {
+  order: 2;
+}
 
-  .box:nth-child(2) {
-    order: 4;
-  }
+.group.reorder  .box:nth-child(5) {
+  order: 6;
+}
 
-  .box:nth-child(3) {
-    order: 1;
-  }
-
-  .box:nth-child(4) {
-    order: 3;
-  }
+.group.reorder  .box:nth-child(6) {
+  order: 3;
 }
