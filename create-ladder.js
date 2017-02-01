@@ -34,7 +34,6 @@ addStep.addEventListener('click', () => {
         <input class='challenge__description'/>
         <label>Fear rating:</label>
         <input type="range"  min="0" max="100" value="50"/>
-        <button type="submit" class="save">Save</button>
       `
   let newStep = document.createElement('FORM');
   newStep.className = 'challenge fold';
@@ -53,15 +52,11 @@ completeLadder.addEventListener('click', ()=> {
   cloud.className += ' animated bounceOutUp';
   //small cloud
   const cloudS = document.getElementById('cloudS');
-  // cloudS.style.animation = 'none';
-  // cloudS.className += ' animated bounceOutUp';
   cloudS.style.display ='none'
   //medium cloud
   const cloudM = document.getElementById('cloudM');
-  // cloudM.style.animation = 'none';
-  // cloudM.className += ' animated bounceOutUp';
   cloudM.style.display ='none'
-
+  //title
   const cloudTitle = document.getElementById('cloudTitle');
   cloudTitle.className += ' animated zoomOut'
   ladder.className += ' animated fadeOut'
