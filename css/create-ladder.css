@@ -1,14 +1,58 @@
 body {
   background-color: #A2C7E5;
+  box-sizing: border-box;
+  margin: 0;
+  height: 300vh;
 }
 
-#cloud {
+.cloud {
   position: absolute;
   display: flex;
   justify-content: center;
   transition: all 1s ease;
   width: 95%;
   z-index: 5;
+}
+
+.cloud-small {
+  width: 25%;
+  z-index: 4;
+  justify-content: flex-end;
+  top: 5%;
+  animation: cloud-move-s 8s ease infinite;
+}
+
+.cloud-medium {
+  width: 40%;
+  z-index: 4;
+  right: 0%;
+  top: 5%;
+  animation: cloud-move-m 6s ease infinite;
+}
+
+
+@keyframes cloud-move-m {
+  0% {
+    transform: none;
+  }
+  40% {
+    transform: translateX(-45%) ;
+  }
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes cloud-move-s {
+  0% {
+    transform: none;
+  }
+  25% {
+    transform: translateX(45%) ;
+  }
+  100% {
+    transform: none;
+  }
 }
 
 .cloud-title {
@@ -21,15 +65,23 @@ body {
   text-align: center;
   margin: 0 auto;
   z-index: 9;
+  transition: top 2s ease;
+}
+
+.move-up {
+  top: 2%;
 }
 
 #ladder {
   margin: 1rem auto;
   perspective: 900px;
   perspective-origin: 50%;
-  padding-top: 15rem;
+  padding-top: 11rem;
   width: 70%;
   z-index: -9;
+  display: flex;
+  flex-direction: column;;
+  transition: all 0.9s ease;
 }
 
 #ladder .opened {
@@ -46,8 +98,8 @@ body {
   transform-origin: 50% 0;
   transform: rotateX(-90deg);
   transition: transform 1s, opacity 0.1s;
-
 }
+
 #ladder .fold.unfolded, #ladder .fold:nth-child(1) {
   opacity: 1;
   height: 15rem;
@@ -62,6 +114,49 @@ input[type=range] {
   width: 90%;
   height: 3rem;
   color: black;
+}
+
+.ladder__btns {
+  position:fixed;
+  left:0;
+  bottom:5%;
+  width:100%;
+  z-index: 10;
+  transition: 1s all ease;
+}
+
+.btn {
+  width: 100%;
+  color: #fff;
+  transition: 0.2s background ease;
+  text-align: center;
+  font-size: 3rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: 0.8rem;
+  padding: 0.5rem 1.2rem;
+  font-family:Trebuchet MS;
+  background: #80B2B2;
+}
+
+/* reordered */
+.group.reorder .box:nth-child(1) {
+  order: 3;
+}
+.group.reorder  .box:nth-child(2) {
+  order: 4;
+}
+
+.group.reorder  .box:nth-child(3) {
+  order: 1;
+}
+
+.group.reorder  .box:nth-child(4) {
+  order: 2;
+}
+
+.group.reorder  .box:nth-child(5) {
+  order: 5;
 }
 
 label {
@@ -108,4 +203,5 @@ span {
   opacity: 0;
   transition: all 0.2s ease-in-out;
   font-size: 1.2rem;
+
 }
