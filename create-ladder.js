@@ -22,7 +22,6 @@ const addHandlersToElements = () => {
     ((i) => {
       challenge[i].addEventListener("submit", () => {
         e.preventDefault();
-        console.log("submited");
       });
     })(i);
   }
