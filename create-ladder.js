@@ -20,12 +20,12 @@
   const addStep = document.getElementById('addStep');
   addStep.addEventListener('click', () => {
     let step = `
-              <label for="description-1">
-                <textarea class='challenge__description' id="description-1" placeholder="Description"></textarea>
-                <span class="challenge_hints">Description</span>
-              </label>
-              <label class='anxiety-rating' for="rating-1"> <p>Low</p><p>Anxiety rating</p> <p>High</p></label>
-              <input class='anxiety-rating__input' id="rating-1" type="range" min="0" max="100" value="50"/>
+                <label for="description-1">
+                  <textarea class='challenge__description' id="description-1" placeholder="Description"></textarea>
+                  <span class="challenge_hints">Description</span>
+                </label>
+                <label class='anxiety-rating' for="rating-1"> <p>Low</p><p>Anxiety rating</p> <p>High</p></label>
+                <input id='slider' class='anxiety-rating__input' id="rating-1" type="range" min="0" max="100" value="50"/>
               `
 
     let newStep = document.createElement('SECTION');
