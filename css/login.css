@@ -42,8 +42,11 @@ img.lets-go {
   background: transparent;
   border: none;
   border-bottom: 0.1rem solid;
+  border-color: #3B3561;
   font-size: 1.5rem;
   text-align: center;
+  color: white;
+  font-weight: bold;
 }
 
 .login-input:focus {
