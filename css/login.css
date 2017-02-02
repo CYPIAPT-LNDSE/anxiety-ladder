@@ -13,10 +13,6 @@ img.lets-go {
   width: 75%;
 }
 
-.show {
-  display: block;
-}
-
 .login {
   font-size: 1.5em;
   font-family: Chivo;
@@ -52,8 +48,4 @@ img.lets-go {
   font-size: 1.5rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
   text-decoration: none;
-}
-
-.login-label {
-  margin-top: 2rem;
 }
