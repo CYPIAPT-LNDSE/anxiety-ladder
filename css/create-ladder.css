@@ -1,4 +1,3 @@
-
 body {
   background-color: #A2C7E5;
   box-sizing: border-box;
@@ -87,10 +86,6 @@ body {
   transition: all 0.9s ease;
 }
 
-#ladder .opened {
-  transform: translateZ(10px) translate(0, -30rem);
-}
-
 #ladder .fold {
   border-left: 1rem solid #3B3561;
   border-right: 1rem solid #3B3561;
@@ -112,8 +107,6 @@ body {
 .challenge {
   font-size: 2.5rem;
 }
-
-
 
 .ladder__btns {
   position:fixed;
@@ -241,7 +234,6 @@ input[type=range] {
   border-radius: 8px;
   height: 1.5rem;
   border: 1px solid #3B3561;
-  /*background-color: #fff;*/
 }
 
 input[type=range]:active, input[type=range]:hover, input[type=range]:focus  {

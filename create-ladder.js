@@ -2,14 +2,15 @@
   const ladder = document.getElementById('ladder');
 
   const showLadder = () => {
-    ladder.className += ' opened';
     const folds = document.getElementsByClassName('fold');
     unfoldQ(folds,0);
+    addEventToSliders();
   };
 
   const unfoldQ = (elem,inx) =>{
     if(inx != elem.length) {
-      elem[inx].className += ' unfolded';
+      let current = elem[inx];
+      current.className += ' unfolded';
       inx = parseInt(inx)+1;
       setTimeout(() => {
         unfoldQ(elem,inx);
@@ -20,13 +21,12 @@
   const addStep = document.getElementById('addStep');
   addStep.addEventListener('click', () => {
     let step = `
-                <label for="description-1">
-                  <textarea class='challenge__description' id="description-1" placeholder="Description"></textarea>
-                  <span class="challenge_hints">Description</span>
-                </label>
-                <label class='anxiety-rating' for="rating-1"> <p>Low</p><p>Anxiety rating</p> <p>High</p></label>
-                <input id='slider' class='anxiety-rating__input' id="rating-1" type="range" min="0" max="100" value="50"/>
-              `
+      <textarea class='challenge__description' id="description-1" placeholder="Description"></textarea>
+      <span class="challenge_hints">Description</span>
+    </label>
+    <label class='anxiety-rating' for="rating-1"> <p>Low</p><p>Anxiety rating</p> <p>High</p></label>
+    <input class='anxiety-rating__input' id="rating-1" type="range" min="0" max="100" value="50"/>
+  `
 
     let newStep = document.createElement('SECTION');
     newStep.className = 'challenge fold box';
@@ -34,6 +34,7 @@
     ladder.appendChild(newStep);
     setTimeout(() => {
       ladder.lastChild.className += ' unfolded';
+      addEventToSliders();
     }, 100);
   })
 
@@ -83,18 +84,16 @@
   }
 
   //Slider
-
-  const seekslider = document.getElementById("slider");
-
-  seekslider.addEventListener('input', function() {
-    const v = this.value;
-    seekslider.style.background = "-moz-linear-gradient(left,  #3B3561 0%, #3B3561 "+ v +"%, white "+ v +"%, white 100%)";
-    seekslider.style.background = "-webkit-gradient(linear, left top, right top, color-stop(0%,#3B3561), color-stop("+ v +"%,#3B3561), color-stop("+ v +"%,white), color-stop(100%,white))";
-    seekslider.style.background = "-webkit-linear-gradient(left,  #3B3561 0%,#3B3561 "+ v +"%,white "+ v +"%,white 100%)";
-    seekslider.style.background = "-o-linear-gradient(left,  #3B3561 0%,#3B3561 "+ v +"%,white "+ v +"%,white 100%)";
-    seekslider.style.background = "-ms-linear-gradient(left,  #3B3561 0%,#3B3561 "+ v +"%,white "+ v +"%,white 100%)";
-    seekslider.style.background = "linear-gradient(to right,  #3B3561 0%,#3B3561 "+ v +"%,white "+ v +"%,white 100%)";
-  });
+  const addEventToSliders = () => {
+    const sliders = document.querySelectorAll(".anxiety-rating__input");
+    console.log(sliders);
+    sliders.forEach((slider) => {
+      slider.addEventListener('input', function() {
+        const v = this.value;
+        slider.style.background = "linear-gradient(to right,  #3B3561 0%,#3B3561 "+ v +"%,white "+ v +"%,white 100%)";
+      });
+    })
+  }
 
   //REORDER steps
   const reOrder = () => {
