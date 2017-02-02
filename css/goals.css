@@ -2,11 +2,19 @@
 .goal {
   height: 30vh;
   position: relative;
+  /*left: -20px;*/
   text-align: center;
   box-sizing: none;
   width:100%;
   padding: 0.6rem;
   font-family : 'Kranky';
+}
+
+.goal:nth-child(even) {
+  left: -6rem;
+}
+.goal:nth-child(odd) {
+  left: 6rem;
 }
 
 .goal--new {
