@@ -29,16 +29,25 @@ img.lets-go {
 .hide {
   visibility: hidden;
 }
+
 .login__details {
-  margin: 1rem 0;
+  margin: 0 0 0.8rem;
+  position: relative;
 }
+
 .login-input {
   width: 80%;
-  margin: 0.6rem auto;
+  margin: 0 auto;
   display: block;
   background: transparent;
   border: none;
   border-bottom: 0.1rem solid;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.login-input:focus {
+  outline: none;
 }
 
 .login__button {
