@@ -2,14 +2,15 @@
   const ladder = document.getElementById('ladder');
 
   const showLadder = () => {
-    ladder.className += ' opened';
     const folds = document.getElementsByClassName('fold');
     unfoldQ(folds,0);
+    addEventToSliders();
   };
 
   const unfoldQ = (elem,inx) =>{
     if(inx != elem.length) {
-      elem[inx].className += ' unfolded';
+      let current = elem[inx];
+      current.className += ' unfolded';
       inx = parseInt(inx)+1;
       setTimeout(() => {
         unfoldQ(elem,inx);
@@ -20,14 +21,12 @@
   const addStep = document.getElementById('addStep');
   addStep.addEventListener('click', () => {
     let step = `
-            <label for="description-1">
-              <textarea class='challenge__description' id="description-1" placeholder="Description"></textarea>
-              <span class="challenge_hints">Description</span>
-            </label>
-            <label for="rating-1">Anxiety rating:
-              <input class='anxiety-rating' id="rating-1" type="range" min="0" max="100" value="50"/>
-            </label>
-            `
+      <textarea class='challenge__description' id="description-1" placeholder="Description"></textarea>
+      <span class="challenge_hints">Description</span>
+    </label>
+    <label class='anxiety-rating' for="rating-1"> <p>Low</p><p>Anxiety rating</p> <p>High</p></label>
+    <input class='anxiety-rating__input' id="rating-1" type="range" min="0" max="100" value="50"/>
+  `
 
     let newStep = document.createElement('SECTION');
     newStep.className = 'challenge fold box';
@@ -35,6 +34,7 @@
     ladder.appendChild(newStep);
     setTimeout(() => {
       ladder.lastChild.className += ' unfolded';
+      addEventToSliders();
     }, 100);
   })
 
@@ -54,9 +54,18 @@
     reOrder();
     changeButtons();
     setText('.challenge__description');
-    setText('.anxiety-rating')
+    setText('.anxiety-rating__input');
+    removeElementsByClass('anxiety-rating')
+
   })
 
+  //Remove elements by className
+  const removeElementsByClass = (className) => {
+  var elements = document.getElementsByClassName(className);
+    while(elements.length > 0){
+        elements[0].parentNode.removeChild(elements[0]);
+    }
+  }
 
   //Swap button title on completion of ladder
   const changeButtons = () => {
@@ -71,6 +80,18 @@
       var contents = document.createElement('P');
       contents.innerText = d.value;
       d.replaceWith(contents);
+    })
+  }
+
+  //Slider
+  const addEventToSliders = () => {
+    const sliders = document.querySelectorAll(".anxiety-rating__input");
+    console.log(sliders);
+    sliders.forEach((slider) => {
+      slider.addEventListener('input', function() {
+        const v = this.value;
+        slider.style.background = "linear-gradient(to right,  #3B3561 0%,#3B3561 "+ v +"%,white "+ v +"%,white 100%)";
+      });
     })
   }
 

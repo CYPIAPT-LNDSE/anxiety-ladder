@@ -26,3 +26,7 @@ nav a {
   position: absolute;
   right: 5%;
 }
+
+.nav__title {
+  margin-top: 2.5rem;
+}

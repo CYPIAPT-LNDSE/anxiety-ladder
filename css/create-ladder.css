@@ -67,6 +67,7 @@ body {
   margin: 0 auto;
   z-index: 9;
   transition: top 2s ease;
+  color: #3B3561;
 }
 
 .move-up {
@@ -85,14 +86,10 @@ body {
   transition: all 0.9s ease;
 }
 
-#ladder .opened {
-  transform: translateZ(10px) translate(0, -30rem);
-}
-
 #ladder .fold {
-  border-left: 1rem solid #433E3F;
-  border-right: 1rem solid #433E3F;
-  border-top: 1rem solid #433E3F;
+  border-left: 1rem solid #3B3561;
+  border-right: 1rem solid #3B3561;
+  border-top: 1rem solid #3B3561;
   display: block;
   opacity: 0;
   padding: 15px 10px;
@@ -109,12 +106,6 @@ body {
 
 .challenge {
   font-size: 2.5rem;
-}
-
-input[type=range] {
-  width: 90%;
-  height: 3rem;
-  color: black;
 }
 
 .ladder__btns {
@@ -148,6 +139,7 @@ input[type=range] {
   border-left: 1.8rem solid #3B3561;
   border-right: 1.8rem solid #3B3561;
   color:#3B3561;
+  height: 8rem;
 }
 
 #completeLadder {
@@ -195,13 +187,18 @@ label {
 
 textarea::placeholder {
   transition: all 0.2s ease-in-out;
-  color: #999;
+  color: #3B3561;
   font: 18px Helvetica, Arial, sans-serif;
 }
 
 textarea:focus {
   padding-top: 28px;
   padding-bottom: 12px;
+  outline: none;
+}
+
+input:focus{
+  outline: none;
 }
 
 textarea:focus::-webkit-input-placeholder {
@@ -214,7 +211,7 @@ textarea:focus + span {
 }
 
 span {
-  color: black;
+  color: #3B3561;
   font: 13px Helvetica, Arial, sans-serif;
   position: absolute;
   top: 0px;
@@ -228,4 +225,43 @@ p {
   color:white;
   font-weight: bold;
   font-style: cursive;
+  margin: 0;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  border-radius: 8px;
+  height: 1.5rem;
+  border: 1px solid #3B3561;
+}
+
+input[type=range]:active, input[type=range]:hover, input[type=range]:focus  {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 4rem;
+  width: 4rem;
+  background: #fff;
+  background-image: url('../images/sad-face.png');
+  cursor: pointer;
+  margin-top: -1.3rem;
+  background: url('../images/sad-face.png') no-repeat center;
+  background-size: contain;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: #3B3561;
+  border-radius: 1.3px;
+}
+
+.anxiety-rating {
+  display: flex;
+  direction: row;
+  justify-content: space-between;
 }
