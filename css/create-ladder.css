@@ -99,7 +99,7 @@ body {
   border-left: 1rem solid #3B3561;
   border-right: 1rem solid #3B3561;
   border-top: 1rem solid #3B3561;
-  height: 15rem;
+  height: 12rem !important;
 }
 
 #ladder .fold.unfolded, #ladder .fold:nth-child(1) {
