@@ -19,7 +19,7 @@ img.lets-go {
   font-weight: bold;
   color: #3B3561;
   position: absolute;
-  top: 74%;
+  top: 77%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
@@ -57,7 +57,15 @@ img.lets-go {
   -webkit-border-radius: 3rem;
   -moz-border-radius: 3rem;
   border-radius: 3rem;
+  border-color: #3B3561;
+  border-width: 0.2rem;
+
   font-size: 1.5rem;
-  padding: 0.5rem 1rem 0.5rem 1rem;
+  font-weight: bold;
+  color:  #3B3561;
   text-decoration: none;
+
+  background-color: #A3C5E6;
+  padding: 0.8rem;
+  width: 50%;
 }
