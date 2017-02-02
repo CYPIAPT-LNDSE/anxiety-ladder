@@ -87,9 +87,6 @@ body {
 }
 
 #ladder .fold {
-  /*border-left: 1rem solid #3B3561;
-  border-right: 1rem solid #3B3561;
-  border-top: 1rem solid #3B3561;*/
   display: block;
   opacity: 0;
   padding: 15px 10px;
@@ -135,7 +132,6 @@ body {
   padding: 0.5rem 1.2rem;
   font-family:Trebuchet MS;
   background-color: #A2C7E5;
-
   font-weight: bold;
 }
 
@@ -179,8 +175,8 @@ body {
 }
 
 label {
-    position: relative;
-    display: block;
+  position: relative;
+  display: block;
 }
 
 .challenge__description {

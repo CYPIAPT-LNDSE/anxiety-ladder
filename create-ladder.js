@@ -11,7 +11,7 @@
   const unfoldQ = (elem,inx) =>{
     if(inx != elem.length) {
       let current = elem[inx];
-      current.className += ' unfolded';
+      current.classList.add('unfolded');
       inx = parseInt(inx)+1;
       setTimeout(() => {
         unfoldQ(elem,inx);
@@ -27,10 +27,9 @@
   //Add Border to folds
   const addBorder = (folds) =>{
     folds.forEach( fold => {
-      fold.classList += ' border';
+      fold.classList.add('border');
     })
   }
-
 
   const addStep = document.getElementById('addStep');
   addStep.addEventListener('click', () => {
@@ -46,7 +45,7 @@
     newStep.innerHTML = step;
     ladder.appendChild(newStep);
     setTimeout(() => {
-      ladder.lastChild.className += ' unfolded';
+      ladder.lastChild.classList.add('unfolded');
       addEventToSliders();
     }, 100);
   })
