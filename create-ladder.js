@@ -34,7 +34,7 @@
   const addStep = document.getElementById('addStep');
   addStep.addEventListener('click', () => {
     let step = `
-      <textarea class='challenge__description' id="description-1" placeholder="Description"></textarea>
+      <textarea class='challenge__description' id="description-1"  rows="4" placeholder="Description"></textarea>
       <span class="challenge_hints">Description</span>
     </label>
     <label class='anxiety-rating' for="rating-1"> <p>Low</p><p>Anxiety rating</p> <p>High</p></label>
