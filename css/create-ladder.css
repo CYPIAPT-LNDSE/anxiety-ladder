@@ -192,7 +192,7 @@ textarea::placeholder {
 }
 
 textarea:focus {
-  padding-top: 28px;
+  padding-top: 4rem;
   padding-bottom: 12px;
   outline: none;
 }
@@ -211,14 +211,14 @@ textarea:focus + span {
 }
 
 span {
-  color: #3B3561;
   font: 13px Helvetica, Arial, sans-serif;
   position: absolute;
   top: 0px;
   left: 20px;
   opacity: 0;
   transition: all 0.2s ease-in-out;
-  font-size: 1.2rem;
+  font-size: 2.5rem;
+  color: #A3C5E6;
 }
 
 p {
