@@ -85,7 +85,8 @@
   //Slider
 
   const seekslider = document.getElementById("slider");
-  seekslider.addEventListener('input', () => {
+
+  seekslider.addEventListener('input', function() {
     const v = this.value;
     seekslider.style.background = "-moz-linear-gradient(left,  #3B3561 0%, #3B3561 "+ v +"%, white "+ v +"%, white 100%)";
     seekslider.style.background = "-webkit-gradient(linear, left top, right top, color-stop(0%,#3B3561), color-stop("+ v +"%,#3B3561), color-stop("+ v +"%,white), color-stop(100%,white))";

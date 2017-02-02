@@ -241,7 +241,7 @@ input[type=range] {
   border-radius: 8px;
   height: 1.5rem;
   border: 1px solid #3B3561;
-  background-color: #fff;
+  /*background-color: #fff;*/
 }
 
 input[type=range]:active, input[type=range]:hover, input[type=range]:focus  {
