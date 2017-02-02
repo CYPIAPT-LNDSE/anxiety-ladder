@@ -1,6 +1,6 @@
 (() => {
   const ladder = document.getElementById('ladder');
-
+  
   //Show first challenge input field
   const showLadder = () => {
     const folds = document.getElementsByClassName('fold');
