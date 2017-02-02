@@ -1,25 +1,38 @@
+
 .goal {
-  height: 35vh;
+  height: 30vh;
   position: relative;
   text-align: center;
   box-sizing: none;
   width:100%;
   padding: 0.6rem;
-  font-family: 'Kranky', cursive;
+  font-family : 'Kranky';
 }
 
 .goal--new {
   opacity: 0.6;
+  transition: opacity 2s ease;
+}
+
+.show {
+  opacity: 1;
 }
 
 .goal__title {
-  position: absolute;
-  top: 50%;
+  position: relative;
+  top: 15%;
   font-size: 4rem;
 }
 
+.goal__img {
+  z-index: -5;
+  position: relative;
+  margin-top: -6rem;
+  width: 20%;
+}
+
 .goal__add {
-  font-size: 30rem;
+  font-size: 20rem;
   position: absolute;
   margin: 0;
   top: 30%;
@@ -33,6 +46,7 @@
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 70%
 }
 
 /* MODAL */
@@ -65,6 +79,7 @@
 }
 
 .modal__content {
+  text-align: center;
   position: absolute;
   box-sizing: border-box;
   display: flex;
@@ -115,22 +130,82 @@
   padding: 0.5rem 1.2rem;
   font-family:Trebuchet MS;
   font-weight:bold;
-  background: #80B2B2;
+  background: #3B3561;
 }
 
 .modal__content__image {
   margin: 0 auto;
+  width: 85%;
 }
 
 .modal .modal__close-button {
   position: absolute;
   z-index: 1;
   top: 2rem;
-  /* needs to look OK with or without scrollbar */
   right: 2rem;
   border: 0;
   background: black;
   color: white;
   padding:  0.5rem 1rem;
   font-size: 2rem;
+}
+
+#firstGoal {
+  margin-top: 10rem;
+}
+
+.cloud-small {
+  width: 25%;
+  z-index: -1;
+  top: 5%;
+  animation: cloud-move-s 8s ease infinite;
+}
+
+.cloud-medium {
+  width: 40%;
+  z-index: -1;
+  right: 0%;
+  top: 5%;
+  animation: cloud-move-m 6s ease infinite;
+}
+
+.first {
+  left: 15%;
+  animation: cloud-move-m-2 10s ease infinite;
+}
+
+@keyframes cloud-move-m {
+  0% {
+    transform: none;
+  }
+  40% {
+    transform: translateX(-45%) ;
+  }
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes cloud-move-s {
+  0% {
+    transform: none;
+  }
+  25% {
+    transform: translateX(45%) ;
+  }
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes cloud-move-m-2 {
+  0% {
+    transform: none;
+  }
+  40% {
+    transform: translateX(100%) ;
+  }
+  100% {
+    transform: none;
+  }
 }
