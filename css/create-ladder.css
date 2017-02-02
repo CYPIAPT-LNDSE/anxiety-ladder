@@ -99,11 +99,12 @@ body {
   border-left: 1rem solid #3B3561;
   border-right: 1rem solid #3B3561;
   border-top: 1rem solid #3B3561;
+  height: 15rem;
 }
 
 #ladder .fold.unfolded, #ladder .fold:nth-child(1) {
   opacity: 1;
-  height: 15rem;
+  height: 22rem;
   transform: rotateX(0);
 }
 
@@ -184,14 +185,13 @@ label {
   font-size: 2.5rem;
   border: none;
   box-sizing: border-box;
-  padding: 1rem;
+  padding: 2rem;
   transition: all 0.2s ease-in-out;
 }
 
 .challenge__description--saved {
   margin: 0;
   color: #3B3561;
-  padding: 2rem;
 }
 
 .anxiety-rating__input--saved {
@@ -270,4 +270,8 @@ input[type=range]::-webkit-slider-thumb {
   display: flex;
   direction: row;
   justify-content: space-between;
+}
+
+#firstStep {
+  height: 17rem;
 }

@@ -1,6 +1,6 @@
 (() => {
   const ladder = document.getElementById('ladder');
-  
+
   //Show first challenge input field
   const showLadder = () => {
     const folds = document.getElementsByClassName('fold');
@@ -34,11 +34,12 @@
   const addStep = document.getElementById('addStep');
   addStep.addEventListener('click', () => {
     let step = `
-      <textarea class='challenge__description' id="description-1"  rows="4" placeholder="Description"></textarea>
-      <span class="challenge_hints">Description</span>
-    </label>
-    <label class='anxiety-rating' for="rating-1"> <p>Low</p><p>Anxiety rating</p> <p>High</p></label>
-    <input class='anxiety-rating__input' id="rating-1" type="range" min="0" max="100" value="50"/>
+      <label for="description-1">
+        <textarea class='challenge__description' id="description-1" rows="4" placeholder="Description:"></textarea>
+        <span class="challenge_hints">Description</span>
+      </label>
+      <label class='anxiety-rating' for="rating-1"> <p class='rating-label'>Low</p><p class='rating-label'>Anxiety rating</p> <p class='rating-label'>High</p></label>
+      <input class='anxiety-rating__input' id="rating-1" type="range" min="0" max="100" value="50"/>
     `
     let newStep = document.createElement('SECTION');
     newStep.className = 'challenge fold box';
