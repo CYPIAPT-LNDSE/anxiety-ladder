@@ -87,15 +87,21 @@ body {
 }
 
 #ladder .fold {
-  border-left: 1rem solid #3B3561;
+  /*border-left: 1rem solid #3B3561;
   border-right: 1rem solid #3B3561;
-  border-top: 1rem solid #3B3561;
+  border-top: 1rem solid #3B3561;*/
   display: block;
   opacity: 0;
   padding: 15px 10px;
   transform-origin: 50% 0;
   transform: rotateX(-90deg);
   transition: transform 1s, opacity 0.1s;
+}
+
+.border {
+  border-left: 1rem solid #3B3561;
+  border-right: 1rem solid #3B3561;
+  border-top: 1rem solid #3B3561;
 }
 
 #ladder .fold.unfolded, #ladder .fold:nth-child(1) {
@@ -141,6 +147,7 @@ body {
   color:#3B3561;
   height: 8rem;
 }
+
 
 #completeLadder {
   border: 0;

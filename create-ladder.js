@@ -18,6 +18,19 @@
     }
   }
 
+  const showBorders = () => {
+    const folds = document.querySelectorAll('.fold');
+    addBorder(folds,0);
+  }
+
+  //Add Border to folds
+  const addBorder = (folds) =>{
+    folds.forEach( fold => {
+      fold.classList += ' border';
+    })
+  }
+
+
   const addStep = document.getElementById('addStep');
   addStep.addEventListener('click', () => {
     let step = `
@@ -50,13 +63,13 @@
     const cloudM = document.getElementById('cloudM');
     cloudM.style.display ='none'
     const cloudTitle = document.getElementById('cloudTitle');
-    cloudTitle.className += ' animated pulse move-up'
+    cloudTitle.className += ' animated pulse move-up';
+    showBorders();
     reOrder();
     changeButtons();
     setText('.challenge__description');
     setText('.anxiety-rating__input');
-    removeElementsByClass('anxiety-rating')
-
+    removeElementsByClass('anxiety-rating');
   })
 
   //Remove elements by className
@@ -86,7 +99,6 @@
   //Slider
   const addEventToSliders = () => {
     const sliders = document.querySelectorAll(".anxiety-rating__input");
-    console.log(sliders);
     sliders.forEach((slider) => {
       slider.addEventListener('input', function() {
         const v = this.value;
