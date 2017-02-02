@@ -1,6 +1,7 @@
 (() => {
   const ladder = document.getElementById('ladder');
 
+  //Show first challenge input field
   const showLadder = () => {
     const folds = document.getElementsByClassName('fold');
     unfoldQ(folds,0);
@@ -39,8 +40,7 @@
     </label>
     <label class='anxiety-rating' for="rating-1"> <p>Low</p><p>Anxiety rating</p> <p>High</p></label>
     <input class='anxiety-rating__input' id="rating-1" type="range" min="0" max="100" value="50"/>
-  `
-
+    `
     let newStep = document.createElement('SECTION');
     newStep.className = 'challenge fold box';
     newStep.innerHTML = step;
