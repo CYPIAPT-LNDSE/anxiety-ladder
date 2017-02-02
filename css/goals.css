@@ -1,11 +1,12 @@
+
 .goal {
-  height: 35vh;
+  height: 30vh;
   position: relative;
   text-align: center;
   box-sizing: none;
   width:100%;
   padding: 0.6rem;
-  font-family: 'Kranky', cursive;
+  font-family : 'Kranky';
 }
 
 .goal--new {
@@ -13,13 +14,13 @@
 }
 
 .goal__title {
-  position: absolute;
-  top: 50%;
+  position: relative;
+  top: 15%;
   font-size: 4rem;
 }
 
 .goal__add {
-  font-size: 30rem;
+  font-size: 20rem;
   position: absolute;
   margin: 0;
   top: 30%;
@@ -33,6 +34,7 @@
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 70%
 }
 
 /* MODAL */
@@ -115,7 +117,7 @@
   padding: 0.5rem 1.2rem;
   font-family:Trebuchet MS;
   font-weight:bold;
-  background: #80B2B2;
+  background: #3B3561;
 }
 
 .modal__content__image {
@@ -126,11 +128,14 @@
   position: absolute;
   z-index: 1;
   top: 2rem;
-  /* needs to look OK with or without scrollbar */
   right: 2rem;
   border: 0;
   background: black;
   color: white;
   padding:  0.5rem 1rem;
   font-size: 2rem;
+}
+
+#firstGoal {
+  margin-top: 10rem;
 }
