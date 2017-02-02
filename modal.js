@@ -5,7 +5,7 @@
   var createGoal = document.getElementById("create-goal");
 
   createGoal.addEventListener('mouseover', function() {
-    createGoal.classList = 'goal';
+    createGoal.classList += ' show';
   })
 
   closeButton.addEventListener("click", function() {
