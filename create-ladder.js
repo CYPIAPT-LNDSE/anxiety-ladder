@@ -24,9 +24,8 @@
               <textarea class='challenge__description' id="description-1" placeholder="Description"></textarea>
               <span class="challenge_hints">Description</span>
             </label>
-            <label for="rating-1">Anxiety rating:
-              <input class='anxiety-rating' id="rating-1" type="range" min="0" max="100" value="50"/>
-            </label>
+            <label class='anxiety-rating' for="rating-1"> Low Anxiety rating High</label>
+            <input class='anxiety-rating__input' id="rating-1" type="range" min="0" max="100" value="50"/>
             `
 
     let newStep = document.createElement('SECTION');
@@ -54,9 +53,18 @@
     reOrder();
     changeButtons();
     setText('.challenge__description');
-    setText('.anxiety-rating')
+    setText('.anxiety-rating__input');
+    removeElementsByClass('anxiety-rating')
+  
   })
 
+  //Remove elements by className
+  const removeElementsByClass = (className) => {
+  var elements = document.getElementsByClassName(className);
+    while(elements.length > 0){
+        elements[0].parentNode.removeChild(elements[0]);
+    }
+  }
 
   //Swap button title on completion of ladder
   const changeButtons = () => {
