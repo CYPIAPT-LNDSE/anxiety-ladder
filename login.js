@@ -6,5 +6,4 @@ letsGo.addEventListener('click', () => {
   setTimeout(function () {
     login.style.visibility = 'visible';
   }, 500);
-
 })
