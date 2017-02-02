@@ -82,6 +82,21 @@
     })
   }
 
+  //Slider
+
+  var seekslider = document.getElementById("slider");
+
+  seekslider.addEventListener('input', function() {
+      var v = this.value;
+
+      seekslider.style.background = "-moz-linear-gradient(left,  #3B3561 0%, #3B3561 "+ v +"%, white "+ v +"%, white 100%)";
+      seekslider.style.background = "-webkit-gradient(linear, left top, right top, color-stop(0%,#3B3561), color-stop("+ v +"%,#3B3561), color-stop("+ v +"%,white), color-stop(100%,white))";
+      seekslider.style.background = "-webkit-linear-gradient(left,  #3B3561 0%,#3B3561 "+ v +"%,white "+ v +"%,white 100%)";
+      seekslider.style.background = "-o-linear-gradient(left,  #3B3561 0%,#3B3561 "+ v +"%,white "+ v +"%,white 100%)";
+      seekslider.style.background = "-ms-linear-gradient(left,  #3B3561 0%,#3B3561 "+ v +"%,white "+ v +"%,white 100%)";
+      seekslider.style.background = "linear-gradient(to right,  #3B3561 0%,#3B3561 "+ v +"%,white "+ v +"%,white 100%)";
+  });
+
   //REORDER steps
   const reOrder = () => {
     var nodes = document.querySelectorAll(".box");
