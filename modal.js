@@ -2,14 +2,18 @@
   var modal = document.querySelector("#modal");
   var modalOverlay = document.querySelector("#modal-overlay");
   var closeButton = document.querySelector("#close-button");
-  var createCloud = document.querySelector("#create-goal");
+  var createGoal = document.getElementById("create-goal");
+
+  createGoal.addEventListener('mouseover', function() {
+    createGoal.classList = 'goal';
+  })
 
   closeButton.addEventListener("click", function() {
     modal.classList.toggle("closed");
     modalOverlay.classList.toggle("closed");
   });
 
-  createCloud.addEventListener("click", function() {
+  createGoal.addEventListener("click", function() {
     modal.classList.toggle("closed");
     modalOverlay.classList.toggle("closed");
   });
