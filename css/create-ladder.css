@@ -1,3 +1,4 @@
+
 body {
   background-color: #A2C7E5;
   box-sizing: border-box;
@@ -67,6 +68,7 @@ body {
   margin: 0 auto;
   z-index: 9;
   transition: top 2s ease;
+  color: #3B3561;
 }
 
 .move-up {
@@ -90,9 +92,9 @@ body {
 }
 
 #ladder .fold {
-  border-left: 1rem solid #433E3F;
-  border-right: 1rem solid #433E3F;
-  border-top: 1rem solid #433E3F;
+  border-left: 1rem solid #3B3561;
+  border-right: 1rem solid #3B3561;
+  border-top: 1rem solid #3B3561;
   display: block;
   opacity: 0;
   padding: 15px 10px;
@@ -202,6 +204,11 @@ textarea::placeholder {
 textarea:focus {
   padding-top: 28px;
   padding-bottom: 12px;
+  outline: none;
+}
+
+input:focus{
+  outline: none;
 }
 
 textarea:focus::-webkit-input-placeholder {
