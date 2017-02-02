@@ -23,6 +23,10 @@ nav a {
   color: white;
   font-size: 5rem;
   text-decoration: none;
-position: absolute;
+  position: absolute;
   right: 5%;
+}
+
+.nav__title {
+  margin-top: 2.5rem;
 }
