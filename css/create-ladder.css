@@ -188,6 +188,18 @@ label {
   transition: all 0.2s ease-in-out;
 }
 
+.challenge__description--saved {
+  margin: 0;
+  color: #3B3561;
+  padding: 2rem;
+}
+
+.anxiety-rating__input--saved {
+  margin: 0;
+  color: #3B3561;
+  font-weight: bold;
+}
+
 textarea::placeholder {
   transition: all 0.2s ease-in-out;
   color: #3B3561;
@@ -224,7 +236,7 @@ span {
   color: #A3C5E6;
 }
 
-p {
+.rating-label {
   color:white;
   font-weight: bold;
   font-style: cursive;

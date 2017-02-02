@@ -90,7 +90,14 @@
     const desc = document.querySelectorAll(select);
     desc.forEach( (d) => {
       var contents = document.createElement('P');
-      contents.innerText = d.value;
+      if(select === '.challenge__description') {
+        contents.innerText = 'Challenge: ' + d.value;
+      } else {
+        contents.innerText = 'Rating: ' + d.value;
+      }
+
+      let classNam = select.substring(1);
+      contents.classList += `${classNam}--saved`;
       d.replaceWith(contents);
     })
   }
@@ -111,7 +118,6 @@
     var nodes = document.querySelectorAll(".box");
     var ease  = Power1.easeInOut;
     var boxes = [];
-
     nodes.forEach( (node,i) => {
       var node = nodes[i];
       TweenLite.set(node, { x: 0 });
