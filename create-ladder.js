@@ -1,6 +1,7 @@
 (() => {
   const ladder = document.getElementById('ladder');
 
+  //Show first challenge input field
   const showLadder = () => {
     const folds = document.getElementsByClassName('fold');
     unfoldQ(folds,0);
@@ -10,12 +11,24 @@
   const unfoldQ = (elem,inx) =>{
     if(inx != elem.length) {
       let current = elem[inx];
-      current.className += ' unfolded';
+      current.classList.add('unfolded');
       inx = parseInt(inx)+1;
       setTimeout(() => {
         unfoldQ(elem,inx);
       }, 500);
     }
+  }
+
+  const showBorders = () => {
+    const folds = document.querySelectorAll('.fold');
+    addBorder(folds,0);
+  }
+
+  //Add Border to folds
+  const addBorder = (folds) =>{
+    folds.forEach( fold => {
+      fold.classList.add('border');
+    })
   }
 
   const addStep = document.getElementById('addStep');
@@ -26,14 +39,13 @@
     </label>
     <label class='anxiety-rating' for="rating-1"> <p>Low</p><p>Anxiety rating</p> <p>High</p></label>
     <input class='anxiety-rating__input' id="rating-1" type="range" min="0" max="100" value="50"/>
-  `
-
+    `
     let newStep = document.createElement('SECTION');
     newStep.className = 'challenge fold box';
     newStep.innerHTML = step;
     ladder.appendChild(newStep);
     setTimeout(() => {
-      ladder.lastChild.className += ' unfolded';
+      ladder.lastChild.classList.add('unfolded');
       addEventToSliders();
     }, 100);
   })
@@ -50,13 +62,13 @@
     const cloudM = document.getElementById('cloudM');
     cloudM.style.display ='none'
     const cloudTitle = document.getElementById('cloudTitle');
-    cloudTitle.className += ' animated pulse move-up'
+    cloudTitle.className += ' animated pulse move-up';
+    showBorders();
     reOrder();
     changeButtons();
     setText('.challenge__description');
     setText('.anxiety-rating__input');
-    removeElementsByClass('anxiety-rating')
-
+    removeElementsByClass('anxiety-rating');
   })
 
   //Remove elements by className
@@ -86,7 +98,6 @@
   //Slider
   const addEventToSliders = () => {
     const sliders = document.querySelectorAll(".anxiety-rating__input");
-    console.log(sliders);
     sliders.forEach((slider) => {
       slider.addEventListener('input', function() {
         const v = this.value;
