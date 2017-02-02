@@ -11,6 +11,7 @@ nav {
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: center;
+  z-index: 10;
 }
 
 nav p {
