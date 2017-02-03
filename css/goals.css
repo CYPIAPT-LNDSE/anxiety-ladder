@@ -9,6 +9,13 @@
   font-family : 'Kranky';
 }
 
+.goal:nth-child(even) {
+  left: -6rem;
+}
+.goal:nth-child(odd) {
+  left: 6rem;
+}
+
 .goal--new {
   opacity: 0.6;
   transition: opacity 2s ease;
