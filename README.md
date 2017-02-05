@@ -6,6 +6,24 @@ A web app for managing anxiety through practise of exposure ladders
 
 There are three key *user journeys*; ladder creation, ladder reviewing, and progress tracking.
 
+## Tech Stack
+
+### Current Tech Stack
+- Html static files
+- Vanilla CSS
+- JS with ES6
+- animate css (library)
+
+### MVP Tech Stack
+- Database: PostgreSQL
+- Server: Node.js Hapi (with hapi authentication)
+- React for server-side rendering
+- Redux state management
+- CSS
+- animate css (library)
+- Client-side JS (animations)
+
+
 ### Ladder creation
 
 #### User Journey
